@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import random
 import rospy
+import random
 import geometry_msgs.msg
 from std_msgs.msg import Bool, UInt32
 
@@ -54,8 +54,8 @@ def main():
     rospy.loginfo('[MOVEMENT ANIMATION] Node running')
     #rate = rospy.Rate(5)
     while not rospy.is_shutdown():
-	    msg_key = input("Type message key: ")
+        msg_key = input("Type message key: ")
         icm.update_behavior(str(msg_key))
-        
+
 if __name__ == "__main__":
     main()
