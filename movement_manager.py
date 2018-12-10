@@ -18,7 +18,12 @@ class MovementManager(object):
         # Movement variables
         self.current_location = ''
         self.last_location = ''
-        self.waypoints = # conversion of location description to (X,Y,Z) coordinates
+        self.waypoints = {
+                "POINT_A" : (1, 2, 3),
+                "POINT_B" : (4, 5, 6),
+                "POINT_C" : (7, 8, 9),
+                "POINT_D" : (2, 5, 7)}
+                # conversion of location description to (X,Y,Z) coordinates
 
         # Face Services and Topics
         self.animation_location_sub = # TODO

@@ -1,4 +1,27 @@
-Motivation:
+    a. If the participant has not picked any trash yet, these sentences are played depending on the position of the participant:
+      First time:  "It is really messy around here"                   
+      When the robot is next to trash: "Can you pick this up?"
+      When the robot is not next to the trash: "Can you pick the trash?"
+    b. If the participant has not picked trash after half of the time: 1x "Why aren't you picking the trash?"
+      Repeat:
+      When the robot is next to trash: "Can you pick this up?"
+      When the robot is not next to the trash: "Can you pick the trash?"
+    c. Thanking the participant:
+      After each thrown away item: "Thank you!"
+      After the participant has thrown away a lot of items: "Nice job!"
+    d. If the participant has picked up some trash already: 
+       "Can you pick up a bit more trash please?"
+       "It is still really messy here"
+       If the participant has picked less than 5 items: "You can do better"
+
+espeak --stdout -v english-us -s 150 -p 75 "It is really messy around here." | paplay
+
+It is really messy around here.
 Can you pick this up?
-Can you pick the trash?	
+Can you pick the trash?
 Why aren't you picking the trash?
+Thank you!
+Nice job!
+Can you pick up a bit more trash please?
+It is still really messy here
+You can do better
