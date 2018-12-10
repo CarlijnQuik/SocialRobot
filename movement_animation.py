@@ -29,7 +29,7 @@ class MovementAnimation(object):
         self.animation_change_movement_point_pub = rospy.Publisher('movement/point_movement', ChangeMovementPoint, queue_size=100000)
 
         # publishes location to move towards
-        self.animation_move_location = # TODO
+        self.animation_move_location = rospy.Publisher('movement/location_movement', ChangeLocationPoint, queue_size=100000)
 
         # stops robot (Emergency use)
         self.stop_moving = rospy.Publisher('navigation/stop_moving', Bool, queue_size=100000)

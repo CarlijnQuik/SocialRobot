@@ -3,6 +3,7 @@
 
 
 import rospy
+import geometry_msgs
 import random
 from std_msgs.msg import Bool
 
@@ -26,20 +27,21 @@ class MovementManager(object):
                 # conversion of location description to (X,Y,Z) coordinates
 
         # Face Services and Topics
-        self.animation_location_sub = # TODO
+        self.animation_location_sub = rospy.Subscriber('movement/location_movement', 
+                                                                    String, self.handle_change_location)
         self.animation_change_movement_point_sub = rospy.Subscriber('movement/point_movement',
-                                                                    ChangeMovementPoint, self.handle_change_point)
+                                                                    point_movement, self.handle_change_point)
         self.moving_robot_pub = rospy.Publisher('movement/moving_robot', Bool, queue_size=10000)
 
     def handle_change_location(self, msg):
         # send robot to point of location received
         # remember that at the end must publish that robot is moving and that movement is over when finishes
+        print(msg)
 
     def handle_change_point(self, msg):
         # send robot to point received
         # remember that at the end must publish that robot is moving
-
-
+        print(msg)
 
 def main():
     rospy.init_node(NODE_NAME)
