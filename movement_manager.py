@@ -3,9 +3,10 @@
 
 
 import rospy
-import geometry_msgs
-import random
+import geometry_msgs.msg
+from std_msgs.msg import String
 from std_msgs.msg import Bool
+import random
 
 
 NODE_NAME = 'movement_manager'
@@ -30,7 +31,7 @@ class MovementManager(object):
         self.animation_location_sub = rospy.Subscriber('movement/location_movement', 
                                                                     String, self.handle_change_location)
         self.animation_change_movement_point_sub = rospy.Subscriber('movement/point_movement',
-                                                                    point_movement, self.handle_change_point)
+                                                                    geometry_msgs.msg.Point, self.handle_change_point)
         self.moving_robot_pub = rospy.Publisher('movement/moving_robot', Bool, queue_size=10000)
 
     def handle_change_location(self, msg):
@@ -42,7 +43,7 @@ class MovementManager(object):
         # send robot to point received
         # remember that at the end must publish that robot is moving
         print(msg)
-
+        
 def main():
     rospy.init_node(NODE_NAME)
     rospy.loginfo('Starting Node: ' + NODE_NAME)
