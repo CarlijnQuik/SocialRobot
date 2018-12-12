@@ -4,8 +4,7 @@
 
 import rospy
 import geometry_msgs.msg
-from std_msgs.msg import String
-from std_msgs.msg import Bool
+from std_msgs.msg import Bool, String
 import random
 
 
@@ -43,7 +42,7 @@ class MovementManager(object):
         # send robot to point received
         # remember that at the end must publish that robot is moving
         print(msg)
-        
+
 def main():
     rospy.init_node(NODE_NAME)
     rospy.loginfo('Starting Node: ' + NODE_NAME)
