@@ -41,8 +41,8 @@ def main():
     rospy.loginfo('Starting Node: ' + NODE_NAME)
     rm = RemoteMovement()
     rospy.loginfo('[REMOTE MOVEMENT] Node running')
-    master_ip = raw_input('Input the ROS MASTER IP address: ')
-    os.system('export ROS_MASTER_URI=http://' + str(master_ip) + ':11311')
+    #master_ip = raw_input('Input the ROS MASTER IP address: ')
+    #os.system('export ROS_MASTER_URI=http://' + str(master_ip) + ':11311')
     #rate = rospy.Rate(5)
     while not rospy.is_shutdown():
         msg_key = str(raw_input('Type message key: '))
