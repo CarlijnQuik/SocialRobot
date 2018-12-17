@@ -20,17 +20,12 @@ The robot moves around and makes sound in the following way:
       First time: "It is really messy around here"
       When the robot is next to trash: "Can you pick this up?"
       When the robot is not next to the trash: "Can you pick the trash?"
-    b. If the participant has not picked trash after half of the time: 1x "Why aren't you picking the trash?"
-      Repeat:
-      When the robot is next to trash: "Can you pick this up?"
-      When the robot is not next to the trash: "Can you pick the trash?"
-    c. Thanking the participant:
+    b. Thanking the participant:
       After each thrown away item: "Thank you!"
       After the participant has thrown away a lot of items: "Nice job!"
-    d. If the participant has picked up some trash already: 
+    c. If the participant has picked up some trash already: 
        "Can you pick up a bit more trash please?"
-       "It is still really messy here"
-       If the participant has picked less than 5 items: "You can do better"
+       "It is still messy here"
     
 Closing
 5. The game stops and the participant is requested to fill out a 5-minute survey.

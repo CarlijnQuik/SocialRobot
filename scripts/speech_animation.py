@@ -16,15 +16,15 @@ class SpeechAnimation(object):
         # self.used_sentences = dict()
         self.sentences = {"1":sentence1, "2":sentence2, "3":sentence3 } 
         rospy.loginfo(self.sentences["1"])
-	rospy.loginfo(self.sentences["2"])
-	rospy.loginfo(self.sentences["3"])
+        rospy.loginfo(self.sentences["2"])
+        rospy.loginfo(self.sentences["3"])
 
         # Face Services and Topics
         self.moving_robot_pub = rospy.Publisher('speech/speech_demo', String, queue_size=10000)
 
     def update_behavior(self, messageKey):
         # what this module should do
-	self.moving_robot_pub.publish(self.sentences[messageKey])
+	    self.moving_robot_pub.publish(self.sentences[messageKey])
 
 # send robot to point received
 # remember that at the end must publish that robot is moving
@@ -35,9 +35,9 @@ def main():
     rospy.loginfo('Movement Manager node running')
     #rate = rospy.Rate(5)
     while not rospy.is_shutdown():
-	msg_key = input("Type message key: ")
-        spanim.update_behavior(str(msg_key))
-        #rate.sleep()
+        msg_key = input("Type message key: ")
+            spanim.update_behavior(str(msg_key))
+            #rate.sleep()
 
 if __name__ == "__main__":
     main()

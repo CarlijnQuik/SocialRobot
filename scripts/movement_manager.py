@@ -37,7 +37,7 @@ class MovementManager(object):
     def handle_change_location(self, msg):
         # send robot to point of location received
         # remember that at the end must publish that robot is moving and that movement is over when finishes
-	print(msg.data)
+        print(msg.data)
         print(self.waypoints[msg.data])
 
     def handle_change_point(self, msg):
