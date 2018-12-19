@@ -1,3 +1,7 @@
 sentence1 = "Can you pick this up?"
 sentence2 = "Can you pick the trash?"
-sentence3 = "Why aren't you picking the trash?"
+sentence3 = "It is really messy here."
+sentence4 = "Can you pick a bit more trash, please?"
+sentence5 = "It is really messy here."
+sentence9 = "Thank you!"
+sentence0 = "Nice job!"
