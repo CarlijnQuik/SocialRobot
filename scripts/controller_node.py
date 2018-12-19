@@ -22,8 +22,8 @@ class ExperimentController(object):
     checkpointList = [POINT_D, POINT_C, POINT_B, POINT_A]
     checkpointTimeDictionary = {
         POINT_A: 10,
-        POINT_B: 9,
-        POINT_C: 7,
+        POINT_B: 12,
+        POINT_C: 9,
         POINT_D: 8.5
     }
 
@@ -35,7 +35,7 @@ class ExperimentController(object):
     ROTATION_LEFT_90 = "RL90"
     ROTATION_RIGHT_90 = "RR90"
 
-    activeRotation = ROTATION_RIGHT_90
+    activeRotation = ROTATION_LEFT_90
 
     def __init__(self):
         rospy.loginfo('[Experiment Controller] Initializing communication with managers.')
