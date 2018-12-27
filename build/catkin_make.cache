@@ -1,0 +1,2 @@
+cereal_port:keyboard_management:magabot
+-DCATKIN_DEVEL_PREFIX=/home/dragos/School/catkin_magabot/devel -DCMAKE_INSTALL_PREFIX=/home/dragos/School/catkin_magabot/install -G Unix Makefiles

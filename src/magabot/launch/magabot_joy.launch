@@ -1,0 +1,9 @@
+<launch>
+	<node name ="magabot_node" pkg="magabot" type="magabot_node" output="screen" />
+
+	<node name="joy_node" pkg="joy" type="joy_node" >
+		<param name="dev" value="/dev/input/js1" />
+	</node>
+
+	<node name="joy_control" pkg="magabot" type="joystick_node"  output="screen" />
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/dragos/School/catkin_magabot/install
+
+Name: keyboard_management
+Description: Description of keyboard_management
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/dragos/School/catkin_magabot/install/lib 
+Requires: 

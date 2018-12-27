@@ -1,0 +1,34 @@
+##Ros workspace for basic control over the MAGABOT robotic platform
+
+This set of programs allows velocity control over the base and inspection of bumpers, battery levels and odometry.
+
+This document assumes familiarity with how ROS (Robotic Operating System) works, specifically:
+
+  - how to create a workspace using catkin
+  - how to create a package
+  - how to write a simple publisher and subscriber
+  - how services work
+  - how to compile packages in a workspace
+  - how to integrate a third party package in our workspace
+
+Additionally, teleoperation of the base will work as-is, if the user is using a Logitech f710 gamepad in D mode, but movement should be possible using any other Twist publisher.
+
+#First usage
+
+Open a terminal at the root of the workspace (catkin_magabot) and run the following commands:
+
+$catkin_make
+$source devel/setup.bash
+
+After these commands, the binaries will be built and running the nodes in this package will be possible.
+
+$roslaunch magabot magabot_joy.launch
+
+Will launch the program that communiates with the arduino, a program which publishes joystick input and a program that converts joystick input to base velocities. Use the left knob to control linear movement and the right to control angular movement.
+
+At this moment, the terminal will accuse any dependencies that are necessary. Install these and repeat.
+
+After the program is launched, the velocities, in the form of ROS Twist messages, may be inspected by running:
+
+$rostopic echo cmd_vel
+
