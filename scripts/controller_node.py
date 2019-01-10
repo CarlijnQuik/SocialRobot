@@ -21,9 +21,9 @@ POINT_D = "D"
 class ExperimentController(object):
     checkpointList = [POINT_D, POINT_C, POINT_B, POINT_A]
     checkpointTimeDictionary = {
-        POINT_A: 10,
-        POINT_B: 12,
-        POINT_C: 9,
+        POINT_A: 12,
+        POINT_B: 5.5,
+        POINT_C: 8,
         POINT_D: 8.5
     }
 
